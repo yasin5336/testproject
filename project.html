@@ -1,43 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/materialize/css/materialize.min.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>project</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/materialize/css/materialize.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/util.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>project</title>
 </head>
+
 <body>
-    
-    <nav>
-        <div class="nav-wrapper">
-          <a href="#!" class="brand-logo">Logo</a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">Javascript</a></li>
-            <li><a href="mobile.html">Mobile</a></li>
-          </ul>
-        </div>
-      </nav>
-    
-      <ul class="sidenav" id="mobile-demo">
+  <!-- navbar ___________start_____________ -->
+  <nav class="blue">
+    <div class="nav-wrapper z-depth-1-half">
+      <a href="#!" class="brand-logo">telegram</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
         <li><a href="sass.html">Sass</a></li>
         <li><a href="badges.html">Components</a></li>
         <li><a href="collapsible.html">Javascript</a></li>
         <li><a href="mobile.html">Mobile</a></li>
       </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li>
+      <div class="user-view">
+        <div class="background blue">
+
+        </div>
+        <a href="./assets/images/download.png"><img class="circle" src="./assets/images/download.png"></a>
+        <a href="#name"><span class="white-text name">yasin karami</span></a>
+        <a href="#email"><span class="white-text email">y1a3s8i4n5336@gmail.com</span></a>
+      </div>
+    </li>
+    <li><a href="#!" class="waves-effect"><i class="material-icons">link</i>profile</a></li>
+    <li><a href="#!" class="waves-effect"><i class="material-icons">settings</i>settings</a></li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li><a class="subheader">info</a></li>
+    <li><a class="waves-effect" href="#!"><i class="material-icons">info</i>about us</a></li>
+  </ul>
+  <!-- navbar ___________end_____________ -->
+
+  <!-- section ___________start_____________ -->
+<section class="flex-c-m flex-col sizefull p-r-20 p-l-20">
+  <img src="./assets/images/download.png" alt="#" class="w-full max-w-200">
+  <a class="waves-effect waves-light btn blue darken-1 w-full max-w-200 m-t-10 m-b-10 rounded_pill"><i class="material-icons left">help</i>tutorial</a>
+  <a class="waves-effect waves-light btn blue darken-1 w-full max-w-200 m-t-10 m-b-10 rounded_pill"><i class="material-icons left">person</i>users manager</a>
+</section>
 
 
 
 
-
-
-
-
-    <script src="/assets/materialize/js/materialize.min.js"></script>
-    <script src="/assets/js/main.js"></script>
+  <script src="/assets/materialize/js/materialize.min.js"></script>
+  <script src="/assets/js/main.js"></script>
 </body>
+
 </html>
