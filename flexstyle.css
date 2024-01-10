@@ -7,7 +7,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     list-style-type: none;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: stretch;
 }
 .flexbox{
     background-color:gray;
