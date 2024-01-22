@@ -12,14 +12,19 @@
     .register {
       width: 100%;
       height: 80%;
-      float: right;
       margin-right: 10px;
       border-radius: 30px;
       background-color: rgb(50, 53, 141);
-      box-sizing: border-box;
-      margin-top: 5%;
-      text-align: center;
-
+      /* text-align: center; */
+      align-self: center;
+      display: flex;
+      
+    }
+    .reg{
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      width: 100%;
     }
 
     .logo {
@@ -27,18 +32,18 @@
       display: block;
       width: 10%;
       height: 100%;
-     
+
     }
 
     .ax {
-      height: 500px;
+      height: 700px;
       width: 50%;
       border: 1px solid black;
       float: right;
     }
 
     .matn {
-      height: 500px;
+      height: 700px;
       width: 50%;
       border: 1px solid black;
       background-color: gray;
@@ -52,18 +57,20 @@
     }
 
     h1 {
-      font-size: 60px;
+      font-size: 90px;
     }
-    .logoa{
+
+    .logoa {
       margin-left: 10;
     }
-    .register2{
+
+    .register2 {
       margin-right: 10px;
-      display: block;
+      display: flex;
       width: 12%;
       height: 100%;
     }
-    
+
   </style>
 </head>
 
@@ -79,11 +86,11 @@
         <li><a href="">about</a></li>
         <li><a href="">blog</a></li>
       </ul>
-     <div class="register2">
-      <div class="register">
-        <a href="" class="sizefull">register</a>
+      <div class="register2">
+        <div class="register">
+          <a href="" class="reg">register</a>
+        </div>
       </div>
-     </div>
 
 
     </div>
