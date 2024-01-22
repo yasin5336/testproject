@@ -1,72 +1,101 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/materialize/css/materialize.min.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/util.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Document</title>
-    <style>
-      .register{
-        width: 10%;
-        height: 80%;
-        float: right;
-        margin-right: 1%;
-        border-radius: 30px;
-        background-color: rgb(50, 53, 141);
-        box-sizing: border-box;
-        margin-top: 0.5%;
-        text-align: center;
-        
-      }
-      .logo{
-        margin-left: 3%;
-        display: inline-block;
-      }
-      .ax{
-        height: 500px;
-        width: 50%;
-        border: 1px solid black;
-        float: right;
-      }
-      .matn{
-        height: 500px;
-        width: 50%;
-        border: 1px solid black;
-        background-color: gray;
-        padding-left: 5%;
-        padding-right: 5%;
-      }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/materialize/css/materialize.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/util.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Document</title>
+  <style>
+    .register {
+      width: 100%;
+      height: 80%;
+      float: right;
+      margin-right: 10px;
+      border-radius: 30px;
+      background-color: rgb(50, 53, 141);
+      box-sizing: border-box;
+      margin-top: 5%;
+      text-align: center;
+
+    }
+
+    .logo {
+      margin-left: 10px;
+      display: block;
+      width: 10%;
+      height: 100%;
+     
+    }
+
+    .ax {
+      height: 500px;
+      width: 50%;
+      border: 1px solid black;
+      float: right;
+    }
+
+    .matn {
+      height: 500px;
+      width: 50%;
+      border: 1px solid black;
+      background-color: gray;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    h1 {
+      font-size: 60px;
+    }
+    .logoa{
+      margin-left: 10;
+    }
+    .register2{
+      margin-right: 10px;
+      display: block;
+      width: 12%;
+      height: 100%;
+    }
     
-    </style>
+  </style>
 </head>
 
 <body>
-    <nav class="red-text.text-lighten-5 grey ">
-        <div class="nav-wrapper z-depth-1-half"> 
-            <a href="#!" class="brand-logo logo">planno</a>
-            <div class="register">
-                <a href="" class="sizefull">register</a>
-            </div>
-            <ul class="hide-on-med-and-down mid flex-c-m " id="head">
-                <li><a href="">feature</a></li>
-                <li><a href="">pricing</a></li>
-                <li><a href="">about</a></li>
-                <li><a href="">blog</a></li>
-            </ul>
-          
-        </div>
-        <div class="ax">
-            <img src="./assets/images/download (1).jpg" alt="jungle" class="sizefull">
-        </div>
-        <div class="matn">
-          <h1>
-            get ready to supercharge your goal-setting and plannig with ai planner
-          </h1>
-        </div>
-    </nav>
+  <nav class="red-text.text-lighten-5 grey ">
+    <div class="nav-wrapper z-depth-1-half header">
+      <div class="logo">
+        <a href="#!" class="brand-logo logoa ">planno</a>
+      </div>
+      <ul class="hide-on-med-and-down mid flex-c-m " id="head">
+        <li><a href="">feature</a></li>
+        <li><a href="">pricing</a></li>
+        <li><a href="">about</a></li>
+        <li><a href="">blog</a></li>
+      </ul>
+     <div class="register2">
+      <div class="register">
+        <a href="" class="sizefull">register</a>
+      </div>
+     </div>
+
+
+    </div>
+    <div class="ax">
+      <img src="./assets/images/download (1).jpg" alt="jungle" class="sizefull">
+    </div>
+    <div class="matn">
+      <h1>
+        get ready to supercharge your goal-setting and plannig with ai planner
+      </h1>
+    </div>
+  </nav>
 </body>
 
 </html>
