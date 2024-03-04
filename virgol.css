@@ -558,9 +558,6 @@ a{
 .feedAdsBox2 img{
     max-width: 100%;
 }
-.feedAdsBox2 img {
-    margin-left: 10px;
-}
 .feedAdsBoxImage{
     height: 325px;
     display: block;
