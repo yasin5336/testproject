@@ -48,15 +48,19 @@ function reset() {
     TheTimer.innerHTML = "00:00:00"
     testWrapper.style.borderColor = "gray"
 }
+function focus(){
+    testArea.focus()
+}
 
 function start() {
     let textEnteredLength = testArea.value.length
     if (textEnteredLength == 0 && !timerRuning) {
         timerRuning = true
-        interval = setInterval(runTimer, 10)
+        interval = setInterval(runTimer, 10,)
     }
 }
 
 testArea.addEventListener("keypress", start)
 testArea.addEventListener("keyup", spellCheck)
 resetButton.addEventListener("click", reset)
+resetButton.addEventListener("click",focus)
