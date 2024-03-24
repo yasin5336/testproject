@@ -1,0 +1,103 @@
+      const currentTodo = [
+        {
+          item: item,
+          isCompleted: false,
+        },
+      ];
+      const todosmap = currentTodo.map((item, i) => {
+        return { id: i, item: item.item, isCompeleted: item.isCompeleted };
+      });
+      const newItem = { id: todosmap.length, item: item, isCompeleted: true };
+      todosmap.push(newItem);
+
+      localStorage.setItem("todos", JSON.stringify(todos));
+      localStorage.setItem("todos", JSON.stringify(todosmap));
+      makeTodoElement([currentTodo]);
+      todos.push(currentTodo);
+      localStorage.setItem("todos", JSON.stringify(todos));
+      makeTodoElement([currentTodo]);
+
+
+      
+      //Add Classes
+      card.classList.add("card");
+      cbContainer.classList.add("cb-container");
+      cbInput.classList.add("cb-input");
+      checkSpan.classList.add("check");
+      item.classList.add("item");
+      clearBtn.classList.add("clear");
+      editBtn.classList.add("clear");
+      editIcon.classList.add("fa-solid");
+      editIcon.classList.add("fa-pen");
+      editIcon.classList.add("iconedit");
+      //Add Attributes
+      card.setAttribute("draggable", true);
+      cbInput.setAttribute("type", "checkbox");
+      img.setAttribute("src", "./assets/images/icon-cross.svg");
+      img.setAttribute("alt", "Clear It");
+      item.textContent = todoObject.item;
+
+      if (todoObject.isCompleted) {
+        card.classList.add("checked");
+        cbInput.setAttribute("checked", "checked");
+      }
+
+      //Add EventListener
+      card.addEventListener("dragstart", () => {
+        card.classList.add("dragging");
+      });
+      editIcon.addEventListener("click", () => {
+        todoInput.focus();
+        todoInput.value = item.textContent;
+        addBtn.addEventListener("click", (e) => {
+          e.item.textContent === todoInput.value;
+        });
+      });
+      card.addEventListener("dragend", () => {
+        card.classList.remove("dragging");
+      });
+      cbInput.addEventListener("click", (e) => {
+        const currentCard = cbInput.parentElement.parentElement;
+        const checked = cbInput.checked;
+        const currentCardIndex = [
+          ...document.querySelectorAll(".todos .card"),
+        ].indexOf(currentCard);
+        stateTodo(currentCardIndex, checked);
+
+        checked
+          ? currentCard.classList.add("checked")
+          : currentCard.classList.remove("checked");
+
+        ItemsLeft.textContent = document.querySelectorAll(
+          ".todos .card:not(.checked)"
+        ).length;
+      });
+
+      clearBtn.addEventListener("click", (e) => {
+        const currentCard = clearBtn.parentElement;
+        currentCard.classList.add("fall");
+        const indexOfCurrentCard = [
+          ...document.querySelectorAll(".todos .card"),
+        ].indexOf(currentCard);
+        removeTodo(indexOfCurrentCard);
+        currentCard.addEventListener("animationend", () => {
+          setTimeout(() => {
+            currentCard.remove();
+            ItemsLeft.textContent = document.querySelectorAll(
+              ".todos .card:not(.checked)"
+            ).length;
+          }, 100);
+        });
+      });
+
+      //Set Element by Parent Child
+      clearBtn.appendChild(img);
+      editBtn.appendChild(editIcon);
+      cbContainer.appendChild(cbInput);
+      cbContainer.appendChild(checkSpan);
+      card.appendChild(cbContainer);
+      card.appendChild(item);
+      card.appendChild(clearBtn);
+      card.appendChild(editBtn);
+
+      document.querySelector(".todos").appendChild(card);

@@ -7,10 +7,17 @@ const filterItem = (e) => {
     fetch("test.json")
       .then((res) => res.json())
       .then((json) => {
-        console.log("Test");
         let output = "";
         json.filter((item) => {
-          if (item.id.toString() === e.target.value) {
+          if (
+            item.id.toString() === e.target.value ||
+            item.name.toLowerCase().includes(e.target.value.toLowerCase()) ||
+            item.lastname
+              .toLowerCase()
+              .includes(e.target.value.toLowerCase()) ||
+            item.age.toLowerCase() === e.target.value.toLowerCase() ||
+            item.city.toLowerCase().includes(e.target.value.toLowerCase())
+          ) {
             output += `
             <ul>
             <li class="id">${item.id}</li>

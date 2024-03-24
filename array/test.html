@@ -15,7 +15,14 @@
         <li>Age</li>
         <li>City</li>
       </ul>
-      <input type="search" class="input" onblur="filterItem(event)" />
+      <input type="search" class="input" onkeyup="filterItem(event)" />
+      <form>
+        <input type="checkbox" class="ID" value="ID" />
+        <input type="checkbox" class="NAME" value="NAME" />
+        <input type="checkbox" class="LASTNAME" value="LASTNAME" />
+        <input type="checkbox" class="AGE" value="AGE" />
+        <input type="checkbox" class="CITY" value="CITY" />
+      </form>
       <section class="items"></section>
     </section>
     <script src="./test.js"></script>

@@ -1,0 +1,70 @@
+    editItemId = null;
+    edititems = null;
+
+
+
+
+  addBtn.addEventListener("click", (et2) => {
+    const item = todoInput.value.trim();
+    if (item) {
+      todoInput.value = "";
+      const todos = !localStorage.getItem("todos")
+        ? []
+        : JSON.parse(localStorage.getItem("todos"));
+          const todosmap = edititems
+        ? todos.map((value, i) => {
+            if (value.id.toString() === editItemId.toString()) {
+              return { id: i, item: item, isCompeleted: value.isCompeleted };
+            }
+            return {
+              id: i,
+              item: value.item,
+              isCompeleted: value.isCompeleted,
+            };
+          })
+        : todos.map((item, i) => {
+            return { id: i, item: item.item, isCompeleted: item.isCompeleted };
+          });
+      if (!edititems) {
+        const newItem = {
+          id: todosmap.length,
+          item: item,
+          isCompeleted: false,
+        };
+        todosmap.push(newItem);
+      }
+
+      localStorage.setItem("todos", JSON.stringify(todosmap));
+      makeTodoElement(todosmap);
+    }
+  });
+
+  var edititems = false;
+let editItemId = null;
+
+
+
+
+      item.setAttribute("data-id", todoObject.id);
+
+
+
+
+
+
+
+
+
+
+
+            editIcon.addEventListener("click", () => {
+        todoInput.focus();
+        edititems = true;
+        editItemId = item.getAttribute("data-id");
+        todoInput.value = item.textContent;
+        if ((edititems = true)) {
+          addBtn.addEventListener("click", () => {
+            item.textContent === todoInput.value;
+          });
+        }
+      });

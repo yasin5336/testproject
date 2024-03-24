@@ -26,7 +26,6 @@ ul {
   justify-content: space-around;
   list-style-type: none;
   padding-left: 0;
-  border: 1px solid black;
   border-radius: 50px;
 }
 li {
@@ -39,6 +38,7 @@ li {
   align-items: center;
   border: 1px solid black;
   border-radius: 50px;
+  margin: 0 5px;
 }
 .ul {
   margin-bottom: 60px;

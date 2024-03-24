@@ -233,6 +233,9 @@ body.light .add .txt-container .txt-input {
   flex: 1;
   color: var(--clr-gb-2);
 }
+.itemedit {
+  display: none;
+}
 
 .item:hover {
   color: var(--clr-gb-1);
@@ -257,6 +260,13 @@ body.light .todos {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s ease;
+  width: 18px;
+  height: 18px;
+}
+.iconedit {
+  width: 18px;
+  height: 18px;
+  color: #ffffff;
 }
 
 .todos .card:hover .clear {
